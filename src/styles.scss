@@ -12,14 +12,49 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$angular-trello-clone-primary: mat-palette($mat-indigo);
+$custom-aqua: (
+    50 : #e0f5f8,
+    100 : #b3e6ec,
+    200 : #80d6e0,
+    300 : #4dc5d4,
+    400 : #26b8ca,
+    500 : #00acc1,
+    600 : #00a5bb,
+    700 : #009bb3,
+    800 : #0092ab,
+    900 : #00829e,
+    A100 : #c9f4ff,
+    A200 : #96e9ff,
+    A400 : #63dfff,
+    A700 : #49daff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+  
+
+// $angular-trello-clone-primary: mat-palette($mat-indigo);
+$angular-trello-clone-primary: mat-palette($custom-aqua);
 $angular-trello-clone-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $angular-trello-clone-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$angular-trello-clone-theme: mat-light-theme($angular-trello-clone-primary, $angular-trello-clone-accent, $angular-trello-clone-warn);
+$angular-trello-clone-theme: mat-dark-theme($angular-trello-clone-primary, $angular-trello-clone-accent, $angular-trello-clone-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
