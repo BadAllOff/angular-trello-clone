@@ -12,8 +12,27 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <ng-content>
+        <mat-toolbar>
+            <!-- *ngIf showing on smaller devices only -->
+            <button 
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
 
-        </ng-content>    
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+
+            <span class="logo" routerLink="/"> 
+                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                Trello clone
+            </span>
+
+        </mat-toolbar>    
+        
+        
+        <ng-content></ng-content>    
+    
     </mat-sidenav-content>
 </mat-sidenav-container>
