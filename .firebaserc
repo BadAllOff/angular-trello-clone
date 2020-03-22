@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-trello-clone": {
+      "hosting": {
+        "angular-trello-clone": [
+          "angular-trello-clone"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "angular-trello-clone",
+      "public": "dist/angular-trello-clone",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
