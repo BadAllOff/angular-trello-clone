@@ -29,6 +29,25 @@
                 Trello clone
             </span>
 
+            <span class="fill-space"></span>
+
+            <div *ngIf="!(isHandset$ | async)">
+                <a mat-button routerLink="/kanban">🍱 Kanban</a>
+                <a mat-button routerLink="/customers">⚡ SSR</a>
+                <a mat-button routerLink="/login">🔑 Login</a>
+            </div>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            
+            <mat-menu #menu="matMenu">
+                <a mat-menu-item href="#">
+                    <i>💾</i>
+                    <span>Code on Github</span>
+                </a>
+            </mat-menu>
+
         </mat-toolbar>    
         
         
