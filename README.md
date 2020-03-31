@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Link to example app
 https://angular-trello-clone.firebaseapp.com/
 
-Kanban boards with DnD functionality with features like:
+Kanban boards with DnD functionality and features like:
 * Google sign in
 * User email Authentication (guard).
 * Kanban boards.
