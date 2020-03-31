@@ -34,7 +34,11 @@
             <div *ngIf="!(isHandset$ | async)">
                 <a mat-button routerLink="/kanban">🍱 Kanban</a>
                 <a mat-button routerLink="/customers">⚡ SSR</a>
-                <a mat-button routerLink="/signin">🔑 Sign in</a>
+                <a mat-button routerLink="/signin" *ngIf="!(afAuth.authState | async)">🔑 Sign in</a>
+                <a mat-button routerLink="/signin" *ngIf="afAuth.authState | async as user" >
+                    <mat-icon aria-hidden="false" aria-label="rofile">face</mat-icon>
+                    Profile
+                </a>
             </div>
 
             <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -42,7 +46,7 @@
             </button>
             
             <mat-menu #menu="matMenu">
-                <a mat-menu-item href="#">
+                <a mat-menu-item href="https://github.com/BadAllOff/angular-trello-clone" target="_blank">
                     <i>💾</i>
                     <span>Code on Github</span>
                 </a>
